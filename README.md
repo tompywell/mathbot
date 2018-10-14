@@ -1,2 +1,2 @@
 # mathbot
-A bot for Discord for evaluating simple math expressions
+A discord bot for evaluating simple math expressions

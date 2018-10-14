@@ -1,0 +1,13 @@
+{
+  "name": "mathbot",
+  "version": "1.0.0",
+  "description": "discord bot for doing math",
+  "main": "bot.js",
+  "author": "tom pywell",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.4.2",
+    "mathjs": "^5.2.0",
+    "request": "^2.88.0"
+  }
+}
