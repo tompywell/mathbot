@@ -10,16 +10,13 @@ bot.on('ready', () => {
 
 bot.on('message', msg => {
   if (msg.author.tag != bot.user.tag){
-    console.log(msg.author.tag);
-    content = msg.content;
-    console.log('attempting to evaluate', content);
-    let answer;
+    console.log('attempting to evaluate "' + msg.content + '" from user ' + msg.author.tag);
     try {
-      answer = math.eval(content);
-      console.log(answer);
-      msg.channel.send(answer);
+      let answer = math.eval(msg.content);
+      console.log(msg.content + ' = ' + answer);
+      msg.channel.send('yo ' + msg.author.username + "! ```" + msg.content + ' = ' + answer + '```');
     } catch(error){
-      console.log('could not evaluate', content);
+      console.log('could not evaluate "' + msg.content + '"');
     }
   }
 });
