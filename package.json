@@ -7,7 +7,7 @@
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "discord.js": "^11.4.2",
-    "mathjs": "^5.2.0",
+    "mathjs": "^5.6.0",
     "request": "^2.88.0"
   }
 }
