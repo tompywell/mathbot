@@ -25,4 +25,6 @@ bot.on('message', msg => {
   }
 });
 
+let token = auth.token || process.env.DISCORD_AUTH_TOKEN
+
 bot.login(auth.token);
