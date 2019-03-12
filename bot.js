@@ -1,7 +1,9 @@
 let discord = require('discord.js');
-let auth = require('./auth.json');
+//let auth = require('./auth.json');
 let math = require('mathjs');
 let coolAsciiFaces = require('cool-ascii-faces')
+
+let authToken;
 
 let bot = new discord.Client();
 let faces = coolAsciiFaces.faces;
@@ -25,6 +27,11 @@ bot.on('message', msg => {
   }
 });
 
-let token = auth.token || process.env.DISCORD_AUTH_TOKEN
+try {
+  let auth = require('./auth.json');
+  authToken = auth.token;
+} catch (err) {
+  authToken = process.env.DISCORD_AUTH_TOKEN
+}
 
-bot.login(auth.token);
+bot.login(authToken);
