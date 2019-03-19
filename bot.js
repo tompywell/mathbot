@@ -13,7 +13,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  if (msg.author.tag != bot.user.tag){
+  if (!msg.author.bot && msg.content){
     console.log('attempting to evaluate "' + msg.content + '" from user ' + msg.author.tag);
     try {
       let answer = math.eval(msg.content);
